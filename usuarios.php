@@ -11,7 +11,7 @@
 <html>
 
 
-<!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:24:24 GMT -->
+
 <head>
 
     <meta charset="utf-8">
@@ -62,7 +62,7 @@
                             <table class="footable table table-stripped table-hover" data-page-size="15" data-filter=#filter>
                                 <thead>
                                 <tr style="background-color:#37474f;color:#fff">
-                                    <!-- <th>ID</th> -->
+                                    <th>ID</th>
                                     <th>Nombre</th>
                                     <th>Correo</th>
                                     <th >Contraseña</th>
@@ -71,23 +71,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    <tr style="color:#424242">
-                                        <td>
-                                           <b>Silvino Millanes</b> 
-                                        </td>
-                                        <td>
-                                           <b>alexmillanes30@gmail.com</b> 
-                                        </td>
-                                        <td>
-                                           <b>alex1234</b> 
-                                        </td>
-                                        <td>
-                                        <a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a>
-                                        </td>
-                                    </tr>
+                                   
                                 <?php  
-                          //  require('ContUsuarios.php');
+                           require('ContUsuarios.php');
                                 ?>
                                 </tbody>
                                 <tfoot>

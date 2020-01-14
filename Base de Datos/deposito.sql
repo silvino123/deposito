@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-12-2019 a las 00:31:35
+-- Tiempo de generación: 14-01-2020 a las 18:25:37
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.1
 
@@ -19,24 +19,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `contabilidad`
+-- Base de datos: `deposito`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `proyectos`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `proyectos` (
-  `id_proyecto` int(11) NOT NULL,
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL,
   `Nombre` varchar(200) NOT NULL,
-  `Estatus` varchar(50) NOT NULL,
-  `FechaInicio` date NOT NULL,
-  `FechaEntrega` date NOT NULL,
-  `Responsable` varchar(200) NOT NULL,
-  `Porcentaje` int(10) NOT NULL,
-  `Cliente` int(10) NOT NULL
+  `Correo` varchar(100) NOT NULL,
+  `Contrasena` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -44,31 +40,20 @@ CREATE TABLE `proyectos` (
 --
 
 --
--- Indices de la tabla `proyectos`
+-- Indices de la tabla `usuarios`
 --
-ALTER TABLE `proyectos`
-  ADD PRIMARY KEY (`id_proyecto`),
-  ADD KEY `Relproyecto` (`Cliente`);
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `proyectos`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `proyectos`
-  MODIFY `id_proyecto` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `proyectos`
---
-ALTER TABLE `proyectos`
-  ADD CONSTRAINT `Relproyecto` FOREIGN KEY (`Cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
