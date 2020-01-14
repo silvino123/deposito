@@ -40,7 +40,7 @@
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#Marca"> <i class="fa fa-plus-square" ></i> Marca</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Linea</a></li>
+                                <li><a > <i class="fa fa-plus-square"></i> Línea</a></li>
                                 <li class="divider"></li>
                                 <li><a > <i class="fa fa-plus-square"></i> Color</a></li>
                                 <li class="divider"></li>
@@ -188,7 +188,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Linea </h5>
+                            <h5>Línea </h5>
                             <div class="ibox-tools">
                                 <!-- <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>

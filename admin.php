@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bitacoras</title>
+    <title>Bitácoras</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -50,7 +50,7 @@
                             <button data-toggle="dropdown" class="btn btn-primary dim btn-large-dim dropdown-toggle" style="width: 140px;font-size: 14px;height: 50px"><i class="fas fa-car-alt"></i>&nbsp;Operaciones <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               
-                                <li><a  data-toggle="modal" data-target="#Estatus"><i class="fa fa-sync-alt"></i> Actualizacion Estatus</a></li>
+                                <li><a  data-toggle="modal" data-target="#Estatus"><i class="fa fa-sync-alt"></i> Actualización Estatus</a></li>
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#Entradas"> <i class="fas fa-hand-holding-usd"></i> Entradas y Salidas</a></li>
                             </ul>
@@ -65,7 +65,7 @@
                 <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h3 class="text-center" style="color:#37474f"> <b>Bitacoras Registradas</b></h3>
+                        <h3 class="text-center" style="color:#37474f"> <b>Bitácoras Registradas</b></h3>
                         <div class="ibox-tools">
                             <!-- <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -105,23 +105,23 @@
                         <th style="background-color:#37474f;color:#fff">Estatus</th>
                         <th style="background-color:#37474f;color:#fff">Inventario</th>
                         <th style="background-color:#37474f;color:#fff">Marca</th>
-                        <th style="background-color:#37474f;color:#fff">Linea</th>
+                        <th style="background-color:#37474f;color:#fff">Línea</th>
                         <th style="background-color:#37474f;color:#fff">Modelo</th>
                         <th style="background-color:#37474f;color:#fff">Placas </th>
                         <th style="background-color:#37474f;color:#fff">Serie</th>
                         <th style="background-color:#37474f;color:#fff">Color</th>
                         <th style="background-color:#37474f;color:#fff">Llaves</th>
                         <th style="background-color:#37474f;color:#fff">Observaciones</th>
-                        <th style="background-color:#37474f;color:#fff">Tipo Vehiculo</th>
+                        <th style="background-color:#37474f;color:#fff">Tipo Vehículo</th>
                         <th style="background-color:#37474f;color:#fff">Tarifa</th>
-                        <th style="background-color:#37474f;color:#fff">Dias en pension</th>
+                        <th style="background-color:#37474f;color:#fff">Días en pensión</th>
                         <th style="background-color:#37474f;color:#fff">Acumulado</th>
-                        <th style="background-color:#37474f;color:#fff">Pension </th>
+                        <th style="background-color:#37474f;color:#fff">Pensión </th>
                         <th style="background-color:#37474f;color:#fff">Costo Extra</th>
-                        <th style="background-color:#37474f;color:#fff">Cost. Grua</th>
-                        <th style="background-color:#37474f;color:#fff">Deposito</th>
-                        <th style="background-color:#37474f;color:#fff">Usuario Libero </th>
-                        <th style="background-color:#37474f;color:#fff">Mp Libero</th>
+                        <th style="background-color:#37474f;color:#fff">Cost. Grúa</th>
+                        <th style="background-color:#37474f;color:#fff">Depósito</th>
+                        <th style="background-color:#37474f;color:#fff">Usuario Liberó </th>
+                        <th style="background-color:#37474f;color:#fff">Mp Liberó</th>
                         <th style="background-color:#37474f;color:#fff">Acciones</th>
                     </tr>
                     </thead>
@@ -439,7 +439,7 @@
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
                                            <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
-                                            <h4 class="modal-title" style="color:#37474f">Bitacora Corralon Municipal C5</h4>
+                                            <h4 class="modal-title" style="color:#37474f">Bitácora Corralón Municipal C5</h4>
                                          
                                         </div>
                                         <div class="modal-body">
@@ -464,7 +464,7 @@
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
                                            <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
-                                            <h4 class="modal-title" style="color:#37474f">Buscador de Vehiculos</h4>
+                                            <h4 class="modal-title" style="color:#37474f">Buscador de Vehículos</h4>
                                          
                                         </div>
                                         <div class="modal-body">

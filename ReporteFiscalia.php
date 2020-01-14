@@ -49,7 +49,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h2 style="color:#37474f" class="text-center"><b>Reporte Fiscalia</b></h2>
+                            <h2 style="color:#37474f" class="text-center"><b>Reporte Fiscalía</b></h2>
 
                             
                         </div>
