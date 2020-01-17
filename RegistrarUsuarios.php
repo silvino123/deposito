@@ -5,10 +5,11 @@ require('conec.php');
 $nombre=$_POST['Nombre'];
 $correo=$_POST['Correo'];
 $password=$_POST['Contrasena'];
+$tipo=$_POST['Tipo'];
 
 
-	$insert= "INSERT INTO usuarios (id_usuario,Nombre,Correo,Contrasena) 
-				  values ('','$nombre','$correo','$password')";
+	$insert= "INSERT INTO usuarios (id_usuario,Nombre,Correo,Contrasena,Tipo) 
+				  values ('','$nombre','$correo','$password','$tipo')";
 
 $ejecuta_insert= mysqli_query($con,$insert) or die("Error al insertar usuario");
 

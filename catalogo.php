@@ -19,6 +19,8 @@
     <script src="https://kit.fontawesome.com/473290e8a6.js"></script>
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="js/alertifyjs/css/themes/default.css">
 </head>
 
 <body>
@@ -40,17 +42,25 @@
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#Marca"> <i class="fa fa-plus-square" ></i> Marca</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Línea</a></li>
+                                <li><a data-toggle="modal" data-target="#Modelo"> <i class="fa fa-plus-square" ></i> Modelo</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Color</a></li>
+                                <li><a data-toggle="modal" data-target="#linea"> <i class="fa fa-plus-square"></i> Línea</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> M.P</a></li>
+                                <li><a data-toggle="modal" data-target="#color"> <i class="fa fa-plus-square"></i> Color</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Departamento</a></li>
+                                <li><a data-toggle="modal" data-target="#mp"> <i class="fa fa-plus-square"></i> M.P</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Motivo</a></li>
+                                <li><a data-toggle="modal" data-target="#departamento"> <i class="fa fa-plus-square"></i> Departamento</a></li>
                                 <li class="divider"></li>
-                                <li><a > <i class="fa fa-plus-square"></i> Departamento2</a></li>
+                                <li><a data-toggle="modal" data-target="#motivo"> <i class="fa fa-plus-square"></i> Motivo</a></li>
+                                <li class="divider"></li>
+                                <li><a data-toggle="modal" data-target="#departamento2"> <i class="fa fa-plus-square"></i> Departamento2</a></li>
+                                <li class="divider"></li>
+                                <li><a data-toggle="modal" data-target="#pension"> <i class="fa fa-plus-square"></i> Pension</a></li>
+                                <li class="divider"></li>
+                                <li><a data-toggle="modal" data-target="#deposito"> <i class="fa fa-plus-square"></i> Deposito</a></li>
+                                <li class="divider"></li>
+                                <li><a data-toggle="modal" data-target="#grua"> <i class="fa fa-plus-square"></i> Grua</a></li>
                             </ul>
                         </div>
                         </div>
@@ -64,59 +74,27 @@
             <div class="row">
                 <div class="col-lg-6">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Operadores</h5>
+                    <div class="ibox-title" >
+                        <h4 style="color:#000000" class="text-center"><b>Operadores</b></h4>
                         <div class="ibox-tools">
-                            <!-- <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-wrench"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a> -->
+                            
                         </div>
                     </div>
                     <div class="ibox-content">
 
                         <table class="table">
                             <thead>
-                            <tr style="background-color:#37474f;color:#fff">
+                            <tr style="background-color:#37474f;color:#fff" >
                                 <th>#</th>
                                 <th>Nombre</th>
-                                <th>Correo</th>
+                                
                                 <th>Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
+                            <?php  
+                           require('ContOperador.php');
+                                ?>
                             </tbody>
                         </table>
 
@@ -125,24 +103,10 @@
             </div>
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Marcas </h5>
+                    <div class="ibox-title" >
+                        <h4 style="color:#000000" class="text-center"><b>Marcas</b> </h4>
                         <div class="ibox-tools">
-                            <!-- <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-wrench"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a> -->
+                            
                         </div>
                     </div>
                     <div class="ibox-content">
@@ -151,33 +115,15 @@
                             <thead>
                             <tr style="background-color:#37474f;color:#fff">
                                 <th>#</th>
-                                <th>Data</th>
-                                <th>User</th>
-                                <th>Value</th>
+                                <th>Nombre</th>
+                                <th>Acciones</th>
+                                
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                            </tr>
+                            <?php  
+                           require('ContMarcas.php');
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -188,84 +134,9 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Línea </h5>
+                            <h4 style="color:#000000" class="text-center"><b>Modelos</b> </h4>
                             <div class="ibox-tools">
-                                <!-- <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="#">Config option 1</a>
-                                    </li>
-                                    <li><a href="#">Config option 2</a>
-                                    </li>
-                                </ul>
-                                <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a> -->
-                            </div>
-                        </div>
-                        <div class="ibox-content">
-
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr style="background-color:#37474f;color:#fff">
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td><a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Color </h5>
-                            <div class="ibox-tools">
-                                <!-- <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="#">Config option 1</a>
-                                    </li>
-                                    <li><a href="#">Config option 2</a>
-                                    </li>
-                                </ul>
-                                <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a> -->
+                               
                             </div>
                         </div>
                         <div class="ibox-content">
@@ -274,35 +145,290 @@
                                 <thead>
                                 <tr style="background-color:#37474f;color:#fff">
                                     <th>#</th>
-                                    <th>Data</th>
-                                    <th>User</th>
-                                    <th>Value</th>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td><span class="pie">0.52,1.041</span></td>
-                                    <td>Samantha</td>
-                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 40% </td>
+                                <?php  
+                           require('ContModelo.php');
+                                ?>
+                               
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- linea -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Líneas</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                   
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td><span class="pie">226,134</span></td>
-                                    <td>Jacob</td>
-                                    <td class="text-warning"> <i class="fa fa-level-down"></i> -20% </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td><span class="pie">0.52/1.561</span></td>
-                                    <td>Damien</td>
-                                    <td class="text-navy"> <i class="fa fa-level-up"></i> 26% </td>
-                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php  
+                           require('ContLineas.php');
+                                ?>
+                               
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+                <!-- final linea -->
+                <!-- color -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Colores</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php  
+                           require('ContColor.php');
+                                ?>
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final color -->
+                <!-- MP -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>M.P</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final mp -->
+                <!-- Departamento -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Departamento</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final Departamento -->
+                <!-- motivo -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Motivo</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final motivo -->
+                <!-- Departamento2 -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Departamento2</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final Departamento2 -->
+                <!-- Pension -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Pension</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final pension -->
+                
+                <!-- Deposito -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Deposito</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- grua -->
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h4 style="color:#000000" class="text-center"><b>Grua</b> </h4>
+                            <div class="ibox-tools">
+                               
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                  
+                                </tr>
+                                </thead>
+                                <tbody>
+                               
+                               
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- final grua -->
             </div>
             </div>
         <!-- final tabla -->
@@ -313,6 +439,7 @@
 
 </div>
 </div>
+<!-- modales operadores -->
 <div class="modal inmodal" id="operadores" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content animated fadeIn">
@@ -323,15 +450,49 @@
                                             
                                         </div>
                                         <div class="modal-body">
-                                           
+                                        <form class="form-horizontal" method="POST" action="RegistrarOperador.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        
+                                                </div>    
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             
-                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal inmodal" id="EditarOperador" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Operador</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarOperador.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales operadores -->
+                            <!-- modales marca -->
                             <div class="modal inmodal" id="Marca" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content animated fadeIn">
@@ -342,15 +503,200 @@
                                             
                                         </div>
                                         <div class="modal-body">
-                                           
+                                        <form class="form-horizontal" method="POST" action="RegistrarMarca.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        
+                                                </div>    
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
                                             
-                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal inmodal" id="EditarMarca" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Marca</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarMarca.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales marcas --> 
+                            <!-- modales modelos -->
+                            <div class="modal inmodal" id="Modelo" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Modelos</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarModelo.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        <div class="form-group">
+                                                        <label>Marcas</label>
+                                                        <select class="select2_demo_1 form-control" name="Marca" id="Marca" required>
+                                           <option value="" selected>Seleccione una Marca</option>
+                                      <?php 
+                               require('conec.php');
+
+                         $rs = mysqli_query($con, "SELECT * FROM marcas");
+
+   while($row = mysqli_fetch_array($rs)){
+     
+     echo"<option value=".$row['id_marca'] ."  >". $row['Nombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+     </select>
+                                                        </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarModelo" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Modelo</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarMarca.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales modelos -->
+                            <div class="modal inmodal" id="linea" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Lineas</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="Registrarlineas.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarLinea" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Linea</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarOperador.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales lineas -->
+                            <!-- modales colores -->
+                            <div class="modal inmodal" id="color" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Colores</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarColor.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
     <!-- Mainly scripts -->
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -395,6 +741,8 @@
  <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
  <script src="js/plugins/dataTables/datatables.min.js"></script>
     <!-- Page-Level Scripts -->
+    <script src="js/alertifyjs/alertify.js"></script>
+    <script src="js/alertifyjs/alertify.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.dataTables-example').DataTable({
@@ -423,6 +771,86 @@
 
         });
 
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarOperador').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalOperador.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarMarca').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalMarca.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarModelo').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalModelo.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarLinea').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalLinea.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
     </script>
 </body>
 

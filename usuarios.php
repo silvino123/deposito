@@ -66,7 +66,7 @@
                                     <th>Nombre</th>
                                     <th>Correo</th>
                                     <th >Contraseña</th>
-                                   
+                                    <th >Tipo</th>
                                     <th  >Acciones</th>
                                 </tr>
                                 </thead>
@@ -112,7 +112,14 @@
                                                         
                                                         <div class="form-group"><label>Correo</label> <input type="email"  class="form-control" id="Correo" name="Correo" required="" ></div>
                                                         <div class="form-group"><label>Contraseña</label> <input type="password"  class="form-control" id="Contrasena" name="Contrasena" required="" ></div>
-                                                        
+                                                        <div class="form-group">
+                                                            <label>Tipo de Usuario</label>
+                                                            <select class="form-control" id="Tipo" name="Tipo" required="">
+                                                                <option value="Administrador">Administrador</option>
+                                                                <option value="Operador">Operador</option>
+                                                                <option value="Fiscalia">Fiscalia</option>
+                                                            </select>
+                                                        </div> 
                                                 </div>    
                                             </div>
                                         </div>
@@ -134,7 +141,7 @@
                                             
                                         </div>
                                         <div class="modal-body">
-                                        <form class="form-horizontal" method="post" action="EditarUsuario.php">
+                                        <form class="form-horizontal" method="post" action="EditarUsuarios.php">
                                         <div class="fetched-data"></div> 
                                         
                                         

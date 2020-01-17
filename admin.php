@@ -21,7 +21,7 @@
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="overflow-x:scroll">
 <div id="wrapper" style="background-color: #fff;">
 <?php include 'Slide-Menu.html'; ?>  
 <div id="page-wrapper" class="gray-bg">  
@@ -60,7 +60,7 @@
                    
         </div>
         <!-- tabla -->
-        <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="wrapper wrapper-content animated fadeInRight" style="width:100%">
             <div class="row">
                 <div class="col-lg-12">
                 <div class="ibox float-e-margins">
@@ -126,295 +126,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="gradeX" style="color:#424242">
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td colspan="2" >x
-                        <!-- <a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style="background-color:#757575;color:#fff" ><i class='fas fa-pencil-alt' title='Editar'></i></a>
-                        <a  class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a> -->
-                        </td>
-
-                    </tr>
-                    <tr class="gradeC" style="color:#424242">
-                    <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">X</td>
-                    </tr>
-                    <tr class="gradeA" style="color:#424242">
-                    <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">X</td>
-                    </tr>
-                    <tr class="gradeA" style="color:#424242">
-                    <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">X</td>
-                    </tr>
-                    <tr class="gradeA" style="color:#424242">
-                    <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">X</td>
-                    </tr>
-                    <tr class="gradeA" style="color:#424242">
-                    <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">4</td>
-                        <td class="center">X</td>
-                        <td class="center">X</td>
-                    </tr>
+                    
+                       
+                        
+                    
                    
-                   
-                    </tfoot>
+                    </tbody>
                     </table>
                         </div>
 
@@ -439,11 +156,187 @@
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
                                            <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
-                                            <h4 class="modal-title" style="color:#37474f">Bitácora Corralón Municipal C5</h4>
+                                            <h4 class="modal-title" style="color:#37474f">Bitácora Depósito Vehicular Autorizado   <label> <? $fecha= date("Y-m-d");?></label></h4>
                                          
                                         </div>
                                         <div class="modal-body">
-                                          
+                                        <div class='row'>
+                                            <h3 style="color:red">Informacion de Entrada</h3>
+    <div class=' col-lg-3' >
+    <label for='sel1'>Operador</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $rs = mysqli_query($con, "SELECT * FROM operadores");
+
+   while($row = mysqli_fetch_array($rs)){
+     
+     echo"<option value=".$row['id_operador'] ."  >". $row['Nombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
+    </select>
+</div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Autoridad que Entrega</label>
+        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    </div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Departamento</label>
+        <input type='text' class='form-control' id='Correo' name='Sucursal' required=''>
+    </div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Motivo</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option ></option>
+        <option value='Activa'>Choque</option>
+        <option value='Bloqueada'>Punible</option>
+        <option value='Activa'>Reuperado</option>
+        <option value='Bloqueada'>M. P. vehiculos robados</option>
+    </select>
+</div>   
+    
+    </div>
+    <!-- final row -->
+    <!-- row2 -->
+    <div class='row'>
+                                     
+    <div class=' col-lg-3' >
+    <label for='sel1'>Departamento2</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $rs = mysqli_query($con, "SELECT * FROM operadores");
+
+   while($row = mysqli_fetch_array($rs)){
+     
+     echo"<option value=".$row['id_operador'] ."  >". $row['Nombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
+    </select>
+</div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Origen</label>
+        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    </div>
+    
+    <div class=' col-lg-3'>
+    <label for='sel1'>Estatus</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option ></option>
+        <option value='Activa'>Patio</option>
+        <option value='Bloqueada'>Liberado</option>
+        
+    </select>
+</div>   
+    
+    </div>
+    <br>
+    <!-- Informacion del vehiculo -->
+    <div class='row'>
+                                            <h3 style="color:red">Informacion del Vehículo</h3>
+    <div class=' col-lg-3' >
+    <label for='sel1'>Marca</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $rs = mysqli_query($con, "SELECT * FROM marcas");
+
+   while($row = mysqli_fetch_array($rs)){
+     $marca=$row['id_marca'];
+     echo"<option value=".$row['id_marca'] ."  >". $row['Nombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
+    </select>
+</div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Tipo</label>
+        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    </div>
+    <div class=' col-lg-2'>
+    <label for='sel1'>Modelo</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $qs = mysqli_query($con, "SELECT * FROM modelos");
+
+   while($row2 = mysqli_fetch_array($qs)){
+     
+     echo"<option value=".$row2['id_modelo'] ."  >". $row2['MNombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
+    </select>
+    </div>
+    <div class=' col-lg-2'>
+    <label for='sel1'>Color</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option ></option>
+        <option value='Activa'>Azul</option>
+        <option value='Bloqueada'>Negro</option>
+        <option value='Activa'>Rojo</option>
+        <option value='Bloqueada'>Verde</option>
+    </select>
+</div>   
+<div class=' col-lg-2'>
+    <label for='sel1'>Placas</label>
+        <input type='text' class='form-control' id='Correo' name='Sucursal' required=''>
+    </div>
+    </div>
+    <!-- final row -->
+    <!-- row2 -->
+    <div class='row'>
+                                     
+    <div class=' col-lg-3' >
+    <label for='sel1'>Serie</label>
+    <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+</div>
+    <div class=' col-lg-3'>
+    <label for='sel1'>Llaves</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option ></option>
+        <option value='Activa'>Si</option>
+        <option value='Bloqueada'>No</option>
+        
+    </select>
+    </div>
+    
+    <div class=' col-lg-3'>
+    <label for='sel1'>Tipo Vehículo</label>
+    <select class='form-control' id='Estatus' name='Estatus' required=''>
+        <option ></option>
+        <option value='Activa'>Patio</option>
+        <option value='Bloqueada'>Liberado</option>
+        
+    </select>
+</div>   
+<div class=' col-lg-3' >
+    <label for='sel1'>Observaciones</label>
+    <textArea type='text' class='form-control' id='Nombre' name='Nombre' required='' ></textArea>
+</div>
+    </div>
                                            
                                            </div>
                                         
@@ -468,14 +361,98 @@
                                          
                                         </div>
                                         <div class="modal-body">
-                                           
-                                  
-                                           </div>
+                                        <div class='row'>
+                                            <h3 style="color:#000000">Buscar por</h3>
+    <div class=' col-lg-3' >
+  
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Placas </label>
+</div>
+    <div class=' col-lg-3'>
+   
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Fecha </label>
+    </div>
+    <div class=' col-lg-2'>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Serie </label>
+    
+    </div>
+    <div class=' col-lg-2'>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Automovil </label>
+</div>   
+<div class=' col-lg-2'>
+<input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Inventario </label>
+    </div>
+    </div>
+    <!-- row2 -->
+    <div class='row'>
                                         
+    <div class=' col-lg-3' >
+  
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Motivo </label>
+</div>
+    <div class=' col-lg-3'>
+   
+    
+    </div>
+    
+    <div class=' col-lg-4'>
+    
+<div class=' col-lg-3'>
+
+    </div>
+    </div>
+   
+    <div class="row">
+    
+    <button class="btn btn-primary dim btn-large-dim" type="button" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
+    </div>
+      <div class="row">
+      <div class=' col-lg-12'>
+      <table class="table table-striped">
+                                <thead>
+                                <tr style="background-color:#37474f;color:#fff">
+                                    <th>Inventario</th>
+                                    <th>Fecha</th>
+                                    <th>Estatus</th>
+                                    <th>Marca</th>
+                                    <th>Tipo</th>
+                                    <th>Modelo</th>
+                                    <th>Placas</th>
+                                    <th>Serie</th>
+                                    <th>Motivo</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                               <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                                   <td></td>
+                               </tr>
+                                </tbody>
+                            </table>
+      <div>                            
+                                           </div>
+                                           </div>
 
                                         <div class="modal-footer">
                                           
-                                            <button type="button" class="btn btn-primary">Registrar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Registrar</button> -->
                                         </div>
                                     </div>
                                 </div>

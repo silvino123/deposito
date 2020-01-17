@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Usuarios</title>
+    <title>Reporte</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -38,15 +38,219 @@
     <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
 <div id="wrapper" style="background-color: #fff;">
     <?php include 'Slide-Menu.html'; ?>  
         <div id="page-wrapper" class="gray-bg">  
             <?php include 'Nav.html'; ?>  
                 <div class="wrapper wrapper-content">
-               
-                <div class="row">
-                <div class="col-lg-12">
+               <div class="row">
+               <button class="btn btn-success " type="button" onclick="tableToExcel('testTable', 'Reporte')" value="Export to Excel"><i class="fa fa-download"></i>&nbsp;&nbsp;<span class="bold">Descargar Reporte</span></button>
+               <br>
+            </div>
+            <br>
+                <div class="row" style="overflow-x:scroll">
+                <table class="table table-striped  table-hover" id="testTable">
+        <thead>
+         <tr style="height: 40px;width: auto;">
+             <th style="width:100px;background-color:#fff;"> <img src="images/logoFiscalia.png" style="height: 50px;"/>  </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th colspan="8"style="background-color: #757575;color: #fff;" class="text-center">CONTROL DE INGRESOS, SALIDAS Y STATUS EN C-5</th>
+             <th  style="background-color: black;"></th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+          
+         </tr>
+         <tr style="background-color: red;color: #fff">
+           <th>Ciudad</th>
+           <th>Fecha de Ingreso al Depósito Vehícular Autorizado</th>
+           <th>Fecha de Salida del Depósito Vehícular Autorizado</th>
+           <th>Marca</th>
+           <th>Tipo</th>
+           <th>Línea</th>
+           <th>Modelo</th>
+           <th>Color</th>
+           <th>Serie y/o Motor Completa</th>  
+           <th>Placas</th>
+           <th>Clasificación Juridíca (Objeto,Producto,Instrumento del Delito/Relacionado con los Hechos,Lugar de la Comision/lugar del hallazgo</th>
+           <th>N° Inventario Agente</th>
+           <th>N° Inventario del Depósito Vehicular Autorizado</th>
+           <th>Reporte Fotográfico</th>
+           <th>¿Ingreso en Grua?</th>
+           <th>Motivo de Ingreso</th>
+           <th>Departamento que Entrega</th>
+           <th>Nombre del Oficial</th>
+           <th>Zona de Recuperación</th>
+           <th>N° IPH</th>
+           <th>Nombre Quien Recibe en Depósito Vehicular Autorizado</th>
+           <th>Agencia que Lleva el Asunto</th>
+           <th>Clasificación Juridíca de los hechos (Robo,Accidente,Etc.)</th>
+           <th>N° NUC</th>
+           <th>Nombre del MP</th>
+           <th>Resolución (Sentido)</th>
+           <th>Fecha de Notificación al Propietario</th>
+           <th>Fecha de Inicio de Termino</th>
+           <th>Fecha de Conclusion de Termino</th>
+           <th>Status</th>
+           <th>Nombre Quien Ordena Salida</th>
+           <th>N° de Oficio con la que se Ordena</th>
+           <th>Departamento</th>
+           <th>Fecha de Solicitud de Validación</th>
+           <th>Fecha Respuesta</th>
+           <th>Nombre quien Valida</th>
+           <th>Fecha el Acuerdo</th>
+           <th>Observaciones</th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          </tr>
+          <tr>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          </tr>
+          <tr>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          <td style="width:100px;background-color:#fff;color:#000000">Hola</td>
+          </tr>
+        </tbody>
+    </table>
+                <!-- <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h2 style="color:#37474f" class="text-center"><b>Reporte Fiscalía</b></h2>
@@ -54,11 +258,92 @@
                             
                         </div>
                         <div class="ibox-content">
-                            
-                            
+                        <div class="table-responsive">
+                        <table class="table table-striped  table-hover">
+        <thead>
+         <tr style="height: 40px;width: auto;">
+             <th style="width:100px;"> <img src="images/logoFiscalia.png" style="height: 50px;"/>  </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th colspan="8"style="background-color: #757575;color: #fff;" class="text-center">CONTROL DE INGRESOS, SALIDAS Y STATUS EN C-5</th>
+             <th  style="background-color: black;"></th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+             <th  style="background-color: black;">    </th>
+          
+         </tr>
+         <tr style="background-color: red;color: #fff">
+           <th>Ciudad</th>
+           <th>Fecha de Ingreso al Depósito Vehícular Autorizado</th>
+           <th>Fecha de Salida del Depósito Vehícular Autorizado</th>
+           <th>Marca</th>
+           <th>Tipo</th>
+           <th>Línea</th>
+           <th>Modelo</th>
+           <th>Color</th>
+           <th>Serie y/o Motor Completa</th>  
+           <th>Placas</th>
+           <th>Clasificación Juridíca (Objeto,Producto,Instrumento del Delito/Relacionado con los Hechos,Lugar de la Comision/lugar del hallazgo</th>
+           <th>N° Inventario Agente</th>
+           <th>N° Inventario del Depósito Vehicular Autorizado</th>
+           <th>Reporte Fotográfico</th>
+           <th>¿Ingreso en Grua?</th>
+           <th>Motivo de Ingreso</th>
+           <th>Departamento que Entrega</th>
+           <th>Nombre del Oficial</th>
+           <th>Zona de Recuperación</th>
+           <th>N° IPH</th>
+           <th>Nombre Quien Recibe en Depósito Vehicular Autorizado</th>
+           <th>Agencia que Lleva el Asunto</th>
+           <th>Clasificación Juridíca de los hechos (Robo,Accidente,Etc.)</th>
+           <th>N° NUC</th>
+           <th>Nombre del MP</th>
+           <th>Resolución (Sentido)</th>
+           <th>Fecha de Notificación al Propietario</th>
+           <th>Fecha de Inicio de Termino</th>
+           <th>Fecha de Conclusion de Termino</th>
+           <th>Status</th>
+           <th>Nombre Quien Ordena Salida</th>
+           <th>N° de Oficio con la que se Ordena</th>
+           <th>Departamento</th>
+           <th>Fecha de Solicitud de Validación</th>
+           <th>Fecha Respuesta</th>
+           <th>Nombre quien Valida</th>
+           <th>Fecha el Acuerdo</th>
+           <th>Observaciones</th>
+         </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>              
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
                 </div>
 
@@ -191,6 +476,19 @@
                 });
             });
         });
+    </script>
+     <script type="text/javascript">
+        var tableToExcel = (function () {
+            var uri = 'data:application/vnd.ms-excel;base64,'
+                , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+                , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
+                , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
+            return function (table, name) {
+                if (!table.nodeType) table = document.getElementById(table)
+                var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML }
+                window.location.href = uri + base64(format(template, ctx))
+            }
+        })()
     </script>
     
 </body>

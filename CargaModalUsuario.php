@@ -6,7 +6,7 @@ if($_POST['rowid']) {
     $id_usuario = $_POST['rowid']; 
     
 
-    $rs = mysqli_query($con, "SELECT I.id_usuario,I.Nombre,I.Correo,I.Contrasena FROM usuarios I  where I.id_usuario ='$id_usuario'");
+    $rs = mysqli_query($con, "SELECT I.id_usuario,I.Nombre,I.Correo,I.Contrasena,I.Tipo FROM usuarios I  where I.id_usuario ='$id_usuario'");
    
     $row = mysqli_fetch_array($rs);
 
@@ -14,6 +14,7 @@ if($_POST['rowid']) {
     $nombre=$row['Nombre'];
     $correo=$row['Correo'];
     $contrasena=$row['Contrasena'];
+    $tipo=$row['Tipo'];
    
    
     // Fetch Records
@@ -39,6 +40,15 @@ if($_POST['rowid']) {
                 <label for='sel1'>Contraseña</label>
                 <input type='text' class='form-control' id='Contrasena' name='Contrasena' required='' value='".$contrasena."'>
             </div>
+            <div class='form-group'>
+                <label>Tipo de Usuario</label>
+                <select class='form-control' id='tipo' name='tipo' required=''>
+                    <option value='".$tipo."' selected=''>".$tipo."</option>
+                    <option value='Administrador'>Administrador</option>
+                    <option value='Operador'>Operador</option>
+                    <option value='Fiscalia'>Fiscalia</option>
+                </select>
+            </div>    
             
             ";
             

@@ -10,10 +10,10 @@ $consulta=mysqli_query($con,"SELECT * from usuarios");
             echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
             echo "<td><b>" . $row['Correo'] .  "</b></td>"; 
              echo "<td><b>" . $row['Contrasena'] .  "</b></td>"; 
-            
+             echo "<td><b>" . $row['Tipo'] .  "</b></td>"; 
             echo "<td>
                          
-            <a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-success' data-id=".$row['id_usuario']."><i class='fas fa-pencil-alt' title='Editar'></i></a>
+            <a data-target='#EditarUsuario' data-toggle='modal' class='btn btn-default' style='background-color:#757575;color:#fff' data-id=".$row['id_usuario']."><i class='fas fa-pencil-alt' title='Editar'></i></a>
            <a onclick='deleteAjax(".$row['id_usuario'].")' class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a>
            
            </td>";
