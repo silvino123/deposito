@@ -42,9 +42,9 @@
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#Marca"> <i class="fa fa-plus-square" ></i> Marca</a></li>
                                 <li class="divider"></li>
-                                <li><a data-toggle="modal" data-target="#Modelo"> <i class="fa fa-plus-square" ></i> Modelo</a></li>
+                                <li><a data-toggle="modal" data-target="#Modelo"> <i class="fa fa-plus-square" ></i> Línea</a></li>
                                 <li class="divider"></li>
-                                <li><a data-toggle="modal" data-target="#linea"> <i class="fa fa-plus-square"></i> Línea</a></li>
+                                <li><a data-toggle="modal" data-target="#linea"> <i class="fa fa-plus-square"></i> Modelo</a></li>
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#color"> <i class="fa fa-plus-square"></i> Color</a></li>
                                 <li class="divider"></li>
@@ -134,7 +134,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Modelos</b> </h4>
+                            <h4 style="color:#000000" class="text-center"><b>Líneas</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -165,7 +165,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Líneas</b> </h4>
+                            <h4 style="color:#000000" class="text-center"><b>Modelo</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -552,7 +552,7 @@
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                             <!-- <i class="fa fa-user modal-icon"></i> -->
-                                            <h4 class="modal-title">Modelos</h4>
+                                            <h4 class="modal-title">Líneas</h4>
                                             
                                         </div>
                                         <div class="modal-body">
@@ -597,7 +597,7 @@
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                            <h4 class="modal-title">Editar Modelo</h4>
+                                            <h4 class="modal-title">Editar Líneas</h4>
                                             
                                         </div>
                                         <div class="modal-body">
@@ -622,7 +622,7 @@
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                             <!-- <i class="fa fa-user modal-icon"></i> -->
-                                            <h4 class="modal-title">Lineas</h4>
+                                            <h4 class="modal-title">Modelo</h4>
                                             
                                         </div>
                                         <div class="modal-body">
@@ -630,7 +630,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12 b-r">
                                                     
-                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        <div class="form-group"><label>Año</label> <input type="number" placeholder="año" class="form-control" id="Nombre" name="Nombre" required="" maxlength="4"></div>
                                                         
                                                 </div>    
                                             </div>
@@ -649,7 +649,7 @@
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                            <h4 class="modal-title">Editar Linea</h4>
+                                            <h4 class="modal-title">Editar Modelo</h4>
                                             
                                         </div>
                                         <div class="modal-body">
