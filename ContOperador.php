@@ -2,12 +2,12 @@
 require("conec.php");
 
 
-$consulta=mysqli_query($con,"SELECT * from operadores");
+$consulta=mysqli_query($con,"SELECT * from operadores ORDER BY ONombre ASC");
         while($row = mysqli_fetch_array($consulta)){
             
             echo "<tr id='delete".$row['id_operador']."'>";
             echo "<td><b>" . $row['id_operador'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
+            echo "<td><b>" . $row['ONombre'] .  "</b></td>"; 
             
             echo "<td>
                          

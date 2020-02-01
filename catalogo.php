@@ -30,7 +30,7 @@
 <?php include 'Nav.html'; ?>  
 <div class="wrapper wrapper-content">
    
-        <div class="row">
+        <!-- <div class="row">
         <div class="col-lg-2">
                         <div class="ibox float-e-margins">
                             
@@ -68,14 +68,14 @@
                     
                   
                    
-        </div>
+        </div> -->
         <!-- tabla -->
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <div class="col-lg-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title" >
-                        <h4 style="color:#000000" class="text-center"><b>Operadores</b></h4>
+                    <a  data-toggle="modal" data-target="#operadores"><i class="fa fa-plus-square" > </i><b> Agregar</b></a>  <h4 style="color:#000000" class="text-center"><b>Operadores</b></h4>
                         <div class="ibox-tools">
                             
                         </div>
@@ -104,7 +104,7 @@
             <div class="col-lg-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title" >
-                        <h4 style="color:#000000" class="text-center"><b>Marcas</b> </h4>
+                    <a data-toggle="modal" data-target="#Marca"> <i class="fa fa-plus-square" ></i> <b> Agregar</b></a>  <h4 style="color:#000000" class="text-center"><b>Marcas</b> </h4>
                         <div class="ibox-tools">
                             
                         </div>
@@ -134,7 +134,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Líneas</b> </h4>
+                        <a data-toggle="modal" data-target="#Modelo"> <i class="fa fa-plus-square" ></i> <b> Agregar</b></a>  <h4 style="color:#000000" class="text-center"><b>Líneas</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -165,13 +165,13 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Modelo</b> </h4>
-                            <div class="ibox-tools">
-                               
+                        <a data-toggle="modal" data-target="#linea"> <i class="fa fa-plus-square"></i> <b>Agregar</b></a><h4 style="color:#000000" class="text-center"><b>Modelo</b>  </h4>
+                            <div class="ibox">
+                            
                             </div>
                         </div>
                         <div class="ibox-content">
-
+                        <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
                                 <tr style="background-color:#37474f;color:#fff">
@@ -189,6 +189,7 @@
                                 </tbody>
                             </table>
                         </div>
+                        </div>
                     </div>
                 </div>
                 <!-- final linea -->
@@ -196,7 +197,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Colores</b> </h4>
+                        <a data-toggle="modal" data-target="#color"> <i class="fa fa-plus-square"></i> <b>Agregar</b></a>   <h4 style="color:#000000" class="text-center"><b>Colores</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -227,7 +228,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>M.P</b> </h4>
+                        <a data-toggle="modal" data-target="#mp"> <i class="fa fa-plus-square"></i> <b>Agregar</b></a>  <h4 style="color:#000000" class="text-center"><b>M.P</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -244,7 +245,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContMp.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -256,7 +259,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Departamento</b> </h4>
+                        <a data-toggle="modal" data-target="#departamento"> <i class="fa fa-plus-square"></i> <b>Agregar</b></a>  <h4 style="color:#000000" class="text-center"><b>Departamento</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -273,7 +276,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContDepartamento.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -285,7 +290,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Motivo</b> </h4>
+                        <a data-toggle="modal" data-target="#motivo"> <i class="fa fa-plus-square"></i> <b>Agregar</b></a> <h4 style="color:#000000" class="text-center"><b>Motivo</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -302,7 +307,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContMotivo.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -314,7 +321,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Departamento2</b> </h4>
+                        <a data-toggle="modal" data-target="#departamento2"> <i class="fa fa-plus-square"></i><b> Agregar</b></a> <h4 style="color:#000000" class="text-center"><b>Zona o Agencia</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -331,7 +338,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContDepartamento2.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -343,7 +352,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Pension</b> </h4>
+                        <a data-toggle="modal" data-target="#pension"> <i class="fa fa-plus-square"></i> <b> Agregar</b></a> <h4 style="color:#000000" class="text-center"><b>Pension</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -361,7 +370,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContPension.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -374,7 +385,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Deposito</b> </h4>
+                        <a data-toggle="modal" data-target="#deposito"> <i class="fa fa-plus-square"></i> <b> Agregar</b></a> <h4 style="color:#000000" class="text-center"><b>Deposito</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -392,7 +403,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContDeposito.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -403,7 +416,7 @@
                 <div class="col-lg-6">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h4 style="color:#000000" class="text-center"><b>Grua</b> </h4>
+                        <a data-toggle="modal" data-target="#grua"> <i class="fa fa-plus-square"></i><b> Agregar</b></a> <h4 style="color:#000000" class="text-center"><b>Grua</b> </h4>
                             <div class="ibox-tools">
                                
                             </div>
@@ -421,7 +434,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                               
+                                <?php  
+                           require('ContGrua.php');
+                                ?>
                                
                                 </tbody>
                             </table>
@@ -572,7 +587,7 @@
 
    while($row = mysqli_fetch_array($rs)){
      
-     echo"<option value=".$row['id_marca'] ."  >". $row['Nombre'] ."</option>";
+     echo"<option value=".$row['id_marca'] ."  >". $row['NMarca'] ."</option>";
                          
     }
 
@@ -601,7 +616,7 @@
                                             
                                         </div>
                                         <div class="modal-body">
-                                        <form class="form-horizontal" method="post" action="EditarMarca.php">
+                                        <form class="form-horizontal" method="post" action="EditarModelo.php">
                                         <div class="fetched-data"></div> 
                                         
                                         
@@ -630,7 +645,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12 b-r">
                                                     
-                                                        <div class="form-group"><label>Año</label> <input type="number" placeholder="año" class="form-control" id="Nombre" name="Nombre" required="" maxlength="4"></div>
+                                                        <div class="form-group"><label>Año</label> <input type="number" placeholder="año" class="form-control" id="Año" name="Año" required="" maxlength="4" size="4"></div>
                                                         
                                                 </div>    
                                             </div>
@@ -653,7 +668,7 @@
                                             
                                         </div>
                                         <div class="modal-body">
-                                        <form class="form-horizontal" method="post" action="EditarOperador.php">
+                                        <form class="form-horizontal" method="post" action="EditarLinea.php">
                                         <div class="fetched-data"></div> 
                                         
                                         
@@ -694,6 +709,403 @@
                                         </div>
                                         </form>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="modal inmodal" id="EditarColor" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Color</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarColor.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Final modales colores -->
+                            <!-- Modales mp -->
+                            <div class="modal inmodal" id="mp" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">M.P</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarMp.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""maxlength="100"></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarMp" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar M.P</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarMp.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales MP -->
+                            <!-- Modales Departamento -->
+                            <div class="modal inmodal" id="departamento" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Departamento</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarDepartamento.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarDepartamento" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Departamento</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarDepartamento.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Final modales departamento -->
+                            <!-- inicio modales motivo -->
+                            <div class="modal inmodal" id="motivo" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Motivo</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarMotivo.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarMotivo" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Motivo</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarMotivo.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales motivo -->
+                            <!-- modales departamento 2 -->
+                            <div class="modal inmodal" id="departamento2" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Zona o Agencia</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarDepartamento2.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarDepartamento2" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Zona o Agencia</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarDepartamento2.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales departamentos 2 -->
+                            <!-- modales pension -->
+                            <div class="modal inmodal" id="pension" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Pension</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarPension.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        <div class="form-group"><label>Precio</label> <input type="number" step="0.01" placeholder="Precio" class="form-control" id="Precio" name="Precio" required=""></div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal inmodal" id="EditarPension" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Pension</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarPension.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- final modales pension -->
+                            <!-- modales deposito -->
+                            <div class="modal inmodal" id="deposito" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Deposito</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarDeposito.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        <div class="form-group"><label>Precio</label> <input type="number" step="0.01" placeholder="Precio" class="form-control" id="Precio" name="Precio" required=""></div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarDeposito" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Deposito</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarDeposito.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+<!-- final modales deposito -->
+<!-- modales grua -->
+<div class="modal inmodal" id="grua" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <!-- <i class="fa fa-user modal-icon"></i> -->
+                                            <h4 class="modal-title">Grua</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="POST" action="RegistrarGrua.php">
+                                            <div class="row">
+                                                <div class="col-lg-12 b-r">
+                                                    
+                                                        <div class="form-group"><label>Nombre</label> <input type="text" placeholder="Nombre" class="form-control" id="Nombre" name="Nombre" required=""></div>
+                                                        <div class="form-group"><label>Precio</label> <input type="number" step="0.01" placeholder="Precio" class="form-control" id="Precio" name="Precio" required=""></div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal inmodal" id="EditarGrua" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated bounceInRight">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Grua</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarGrua.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                         
+                                    </div>
+                                    </form>
                                 </div>
                             </div>
 
@@ -852,6 +1264,175 @@
             });
         });
     </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarColor').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalColor.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarMp').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalMp.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarDepartamento').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalDepartamento.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarMotivo').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalMotivo.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarDepartamento2').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalDepartamento2.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarPension').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalPension.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarDeposito').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalDeposito.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarGrua').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalGrua.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function()
+{
+    document.getElementById('Año').setAttribute('maxlength',4);
+});
+$("Año").keypress(function(e){
+    document.getElementById('Año').setAttribute('maxlength',4);
+});
+        </script>
 </body>
 
 <!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:24:34 GMT -->

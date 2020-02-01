@@ -2,12 +2,12 @@
 require("conec.php");
 
 
-$consulta=mysqli_query($con,"SELECT * from marcas");
+$consulta=mysqli_query($con,"SELECT * from marcas ORDER BY NMarca ASC");
         while($row = mysqli_fetch_array($consulta)){
             
             echo "<tr id='delete".$row['id_marca']."'>";
             echo "<td><b>" . $row['id_marca'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
+            echo "<td><b>" . $row['NMarca'] .  "</b></td>"; 
             
             echo "<td>
                          

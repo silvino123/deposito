@@ -2,12 +2,12 @@
 require("conec.php");
 
 
-$consulta=mysqli_query($con,"SELECT * from colores");
+$consulta=mysqli_query($con,"SELECT * from colores ORDER BY Color ASC");
         while($row = mysqli_fetch_array($consulta)){
             
             echo "<tr id='delete".$row['id_color']."'>";
             echo "<td><b>" . $row['id_color'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
+            echo "<td><b>" . $row['Color'] .  "</b></td>"; 
             
             echo "<td>
                          

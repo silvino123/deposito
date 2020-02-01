@@ -6,12 +6,12 @@ if($_POST['rowid']) {
     $id_operador = $_POST['rowid']; 
     
 
-    $rs = mysqli_query($con, "SELECT I.id_operador,I.Nombre FROM operadores I  where I.id_operador ='$id_operador'");
+    $rs = mysqli_query($con, "SELECT I.id_operador,I.ONombre FROM operadores I  where I.id_operador ='$id_operador'");
    
     $row = mysqli_fetch_array($rs);
 
     $id=$row['id_operador'];
-    $nombre=$row['Nombre'];
+    $nombre=$row['ONombre'];
     
    
    

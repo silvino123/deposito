@@ -2,13 +2,13 @@
 require("conec.php");
 
 
-$consulta=mysqli_query($con,"SELECT C.id_modelo,C.MNombre,C.Marca,S.Nombre from modelos C  inner join marcas S on C.Marca = S.id_marca");
+$consulta=mysqli_query($con,"SELECT C.id_modelo,C.MNombre,C.Marca,S.NMarca from modelos C  inner join marcas S on C.Marca = S.id_marca");
         while($row = mysqli_fetch_array($consulta)){
             
             echo "<tr id='delete".$row['id_modelo']."'>";
             echo "<td><b>" . $row['id_modelo'] .  "</b></td>"; 
             echo "<td><b>" . $row['MNombre'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
+            echo "<td><b>" . $row['NMarca'] .  "</b></td>"; 
             echo "<td>
                          
             <a data-target='#EditarModelo' data-toggle='modal' class='btn btn-default' style='background-color:#757575;color:#fff' data-id=".$row['id_modelo']."><i class='fas fa-pencil-alt' title='Editar'></i></a>
@@ -25,7 +25,7 @@ $consulta=mysqli_query($con,"SELECT C.id_modelo,C.MNombre,C.Marca,S.Nombre from 
    function deletemodelo(id_modelo) {
     
     
-     if (alertify.confirm('¿Esta seguro de que desea eliminar este Modelo?','El elemento se eliminara permanentemente', function(){
+     if (alertify.confirm('¿Esta seguro de que desea eliminar esta Linea?','El elemento se eliminara permanentemente', function(){
       
        $.ajax({
            type: 'post',

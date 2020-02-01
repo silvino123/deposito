@@ -6,12 +6,12 @@ if($_POST['rowid']) {
     $id_marca = $_POST['rowid']; 
     
 
-    $rs = mysqli_query($con, "SELECT I.id_marca,I.Nombre FROM marcas I  where I.id_marca ='$id_marca'");
+    $rs = mysqli_query($con, "SELECT I.id_marca,I.NMarca FROM marcas I  where I.id_marca ='$id_marca'");
    
     $row = mysqli_fetch_array($rs);
 
     $id=$row['id_marca'];
-    $nombre=$row['Nombre'];
+    $nombre=$row['NMarca'];
     
    
    

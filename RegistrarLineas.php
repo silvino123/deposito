@@ -2,7 +2,7 @@
 
 require('conec.php');
 
-$nombre=$_POST['Nombre'];
+$nombre=$_POST['Año'];
 
 
 

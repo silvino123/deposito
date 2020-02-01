@@ -6,7 +6,7 @@ $nombre=$_POST['Nombre'];
 
 
 
-	$insert= "INSERT INTO operadores (id_operador,Nombre) 
+	$insert= "INSERT INTO operadores (id_operador,ONombre) 
 				  values ('','$nombre')";
 
 $ejecuta_insert= mysqli_query($con,$insert) or die("Error al insertar operador");

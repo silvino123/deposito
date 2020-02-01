@@ -6,7 +6,7 @@ $nombre=$_POST['Nombre'];
 
 
 
-	$insert= "INSERT INTO marcas (id_marca,Nombre) 
+	$insert= "INSERT INTO marcas (id_marca,NMarca) 
 				  values ('','$nombre')";
 
 $ejecuta_insert= mysqli_query($con,$insert) or die("Error al insertar marca");

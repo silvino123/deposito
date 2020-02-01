@@ -19,6 +19,7 @@
     <script src="https://kit.fontawesome.com/473290e8a6.js"></script>
     <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
 </head>
 
 <body style="overflow-x:scroll">
@@ -91,7 +92,8 @@
                     <thead >
                     <tr >
                         <th style="background-color:#37474f;color:#fff">Ciudad</th>
-                        <th style="background-color:#37474f;color:#fff">Fecha</th>
+                        <th style="background-color:#37474f;color:#fff" >    Fecha </th>
+                        <th style="background-color:#37474f;color:#fff">Ubicación</th>
                         <th style="background-color:#37474f;color:#fff">Operador</th>
                         <th style="background-color:#37474f;color:#fff">Inventario</th>
                         <th style="background-color:#37474f;color:#fff">Inventario del oficial</th>
@@ -103,7 +105,7 @@
                         <th style="background-color:#37474f;color:#fff">Origen</th>
                         <th style="background-color:#37474f;color:#fff">Fecha Salida</th>
                         <th style="background-color:#37474f;color:#fff">Estatus</th>
-                        <th style="background-color:#37474f;color:#fff">Inventario</th>
+                        <th style="background-color:#37474f;color:#fff">Inventario DVA</th>
                         <th style="background-color:#37474f;color:#fff">Marca</th>
                         <th style="background-color:#37474f;color:#fff">Línea</th>
                         <th style="background-color:#37474f;color:#fff">Modelo</th>
@@ -111,6 +113,7 @@
                         <th style="background-color:#37474f;color:#fff">Serie</th>
                         <th style="background-color:#37474f;color:#fff">Color</th>
                         <th style="background-color:#37474f;color:#fff">Llaves</th>
+                        <th style="background-color:#37474f;color:#fff">Fotografia</th>
                         <th style="background-color:#37474f;color:#fff">Observaciones</th>
                         <th style="background-color:#37474f;color:#fff">Tipo Vehículo</th>
                         <th style="background-color:#37474f;color:#fff">Tarifa</th>
@@ -122,12 +125,16 @@
                         <th style="background-color:#37474f;color:#fff">Depósito</th>
                         <th style="background-color:#37474f;color:#fff">Usuario Liberó </th>
                         <th style="background-color:#37474f;color:#fff">Mp Liberó</th>
-                        <th style="background-color:#37474f;color:#fff">Acciones</th>
+                        <th style="background-color:#37474f;color:#fff" >Editar</th>
+                        <th style="background-color:#37474f;color:#fff" >Eliminar</th>
+                        
                     </tr>
                     </thead>
                     <tbody>
                     
-                       
+                    <?php  
+                           require('ContBitacora.php');
+                                ?>
                         
                     
                    
@@ -155,16 +162,17 @@
                                            
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                           <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
-                                            <h4 class="modal-title" style="color:#37474f">Bitácora Depósito Vehicular Autorizado   <label> <? $fecha= date("Y-m-d");?></label></h4>
-                                         
+                                           <img alt="image" src="images/logo.jpg" style="width: 100px; height:80px;margin-left:-700px;"/>
+                                            <h5 class="modal-title" style="color:#37474f">Bitácora Depósito Vehicular Autorizado   </h5>
+                                            
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body" style="background-color:#e0e0e0">
+                                        <form class="form-horizontal" method="POST" action="RegistrarBitacora.php">
                                         <div class='row'>
-                                            <h3 style="color:red">Informacion de Entrada</h3>
+                                            <h3 style="color:red">Información de Entrada</h3>
     <div class=' col-lg-3' >
-    <label for='sel1'>Operador</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
+    <label for='sel1'style="color:#37474f">Operador</label>
+    <select class='form-control' id='Operador' name='Operador' required=''>
         <option >Seleccionar</option>
         <?php 
                                require('conec.php');
@@ -173,7 +181,7 @@
 
    while($row = mysqli_fetch_array($rs)){
      
-     echo"<option value=".$row['id_operador'] ."  >". $row['Nombre'] ."</option>";
+     echo"<option value=".$row['id_operador'] ."  >". $row['ONombre'] ."</option>";
                          
     }
 
@@ -183,21 +191,47 @@
     </select>
 </div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Autoridad que Entrega</label>
-        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    <label for='sel1'style="color:#37474f">Autoridad que Entrega</label>
+        <input type='text' class='form-control' id='AutoridadEntrega' name='AutoridadEntrega' required='' >
     </div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Departamento</label>
-        <input type='text' class='form-control' id='Correo' name='Sucursal' required=''>
+    <label for='sel1' style="color:#37474f">Departamento</label>
+    <select class='form-control' id='Departamento' name='Departamento' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $xs = mysqli_query($con, "SELECT * FROM departamento");
+
+   while($rows = mysqli_fetch_array($xs)){
+     
+     echo"<option value=".$rows['id_departamento'] ."  >". $rows['DNombre'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
+    </select>
     </div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Motivo</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
-        <option ></option>
-        <option value='Activa'>Choque</option>
-        <option value='Bloqueada'>Punible</option>
-        <option value='Activa'>Reuperado</option>
-        <option value='Bloqueada'>M. P. vehiculos robados</option>
+    <label for='sel1' style="color:#37474f">Motivo</label>
+    <select class='form-control' id='Motivo' name='Motivo' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $xs = mysqli_query($con, "SELECT * FROM motivo");
+
+   while($rows = mysqli_fetch_array($xs)){
+     
+     echo"<option value=".$rows['id_motivo'] ."  >". $rows['NMotivo'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
     </select>
 </div>   
     
@@ -207,17 +241,17 @@
     <div class='row'>
                                      
     <div class=' col-lg-3' >
-    <label for='sel1'>Departamento2</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
+    <label for='sel1' style="color:#37474f">Zona o Agencia</label>
+    <select class='form-control' id='Departamento2' name='Departamento2' required=''>
         <option >Seleccionar</option>
         <?php 
                                require('conec.php');
 
-                         $rs = mysqli_query($con, "SELECT * FROM operadores");
+                         $rss = mysqli_query($con, "SELECT * FROM departamento2");
 
-   while($row = mysqli_fetch_array($rs)){
+   while($row2 = mysqli_fetch_array($rss)){
      
-     echo"<option value=".$row['id_operador'] ."  >". $row['Nombre'] ."</option>";
+     echo"<option value=".$row2['id_departamento2'] ."  >". $row2['Zona'] ."</option>";
                          
     }
 
@@ -227,61 +261,91 @@
     </select>
 </div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Origen</label>
-        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    <label for='sel1' style="color:#37474f">Origen</label>
+        <input type='text' class='form-control' id='Origen' name='Origen' required='' >
     </div>
     
     <div class=' col-lg-3'>
-    <label for='sel1'>Estatus</label>
+    <label for='sel1' style="color:#37474f">Estatus</label>
     <select class='form-control' id='Estatus' name='Estatus' required=''>
-        <option ></option>
-        <option value='Activa'>Patio</option>
-        <option value='Bloqueada'>Liberado</option>
+        <option >Seleccionar</option>
+        <option value='Patio'>Patio</option>
+        <option value='Liberado'>Liberado</option>
         
     </select>
 </div>   
-    
+<div class=' col-lg-3'>
+    <label for='sel1' style="color:#37474f">Inventario Agente</label>
+        <input type='number' class='form-control' id='InventarioAgente' name='InventarioAgente' required='' >
     </div>
+    </div>
+
     <br>
+    <!-- row3 -->
+    <div class='row'>
+                                     
+                                     <div class=' col-lg-3' >
+                                     <label for='sel1' style="color:#37474f">Inventario DVA</label>
+                                     
+        <input type='number' class='form-control' id='InventarioDVA' name='InventarioDVA'  >
+                                 </div>
+                                     <div class=' col-lg-3'>
+                                     <label for='sel1' style="color:#37474f"># IPH</label>
+                                         <input type='number' class='form-control' id='IPH' name='IPH' required='' >
+                                     </div>
+                                     
+                                     <div class=' col-lg-3'>
+                                     
+                                 </div>   
+                                 <div class=' col-lg-3'>
+                                     
+                                     </div>
+                                     </div>
     <!-- Informacion del vehiculo -->
     <div class='row'>
-                                            <h3 style="color:red">Informacion del Vehículo</h3>
+                                            <h3 style="color:red">Información del Vehículo</h3>
     <div class=' col-lg-3' >
-    <label for='sel1'>Marca</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
+    <label for='sel1' style="color:#37474f">Marca</label>
+    <select class='form-control' id='Marca' name='Marca' required='' onchange="CargarLineas(this.value);">>
         <option >Seleccionar</option>
         <?php 
                                require('conec.php');
 
-                         $rs = mysqli_query($con, "SELECT * FROM marcas");
+                         $rs = mysqli_query($con, "SELECT * FROM marcas ORDER BY NMarca ASC");
 
-   while($row = mysqli_fetch_array($rs)){
-     $marca=$row['id_marca'];
-     echo"<option value=".$row['id_marca'] ."  >". $row['Nombre'] ."</option>";
-                         
-    }
-
-  mysqli_close($con);
- ?>      
-        
-    </select>
-</div>
+   while($row3 = mysqli_fetch_array($rs)){
+    
+     echo"<option value=".$row3['id_marca'] ."  >". $row3['NMarca'] ."</option>";
+   } 
+   echo" </select>";
+echo"</div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Tipo</label>
-        <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    <label for='sel1' style='color:#37474f'>Tipo</label>
+    <select class='form-control' id='Linea' name='Linea' required=''>
+        <option >Seleccionar</option>";
+       
+                               
+
+                        
+   echo" </select>";
+   
+  mysqli_close($con);
+ ?>      
+        
+    
     </div>
     <div class=' col-lg-2'>
-    <label for='sel1'>Modelo</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
+    <label for='sel1' style="color:#37474f">Modelo</label>
+    <select class='form-control' id='Modelo' name='Modelo' required=''>
         <option >Seleccionar</option>
         <?php 
                                require('conec.php');
 
-                         $qs = mysqli_query($con, "SELECT * FROM modelos");
+                         $qsr = mysqli_query($con, "SELECT * FROM lineas ORDER BY Linea DESC");
 
-   while($row2 = mysqli_fetch_array($qs)){
+   while($row2 = mysqli_fetch_array($qsr)){
      
-     echo"<option value=".$row2['id_modelo'] ."  >". $row2['MNombre'] ."</option>";
+     echo"<option value=".$row2['id_linea'] ."  >". $row2['Linea'] ."</option>";
                          
     }
 
@@ -291,18 +355,28 @@
     </select>
     </div>
     <div class=' col-lg-2'>
-    <label for='sel1'>Color</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
-        <option ></option>
-        <option value='Activa'>Azul</option>
-        <option value='Bloqueada'>Negro</option>
-        <option value='Activa'>Rojo</option>
-        <option value='Bloqueada'>Verde</option>
+    <label for='sel1' style="color:#37474f">Color</label>
+    <select class='form-control' id='Color' name='Color' required=''>
+        <option >Seleccionar</option>
+        <?php 
+                               require('conec.php');
+
+                         $qsr = mysqli_query($con, "SELECT * FROM colores ORDER BY Color ASC");
+
+   while($row6 = mysqli_fetch_array($qsr)){
+     
+     echo"<option value=".$row6['id_color'] ."  >". $row6['Color'] ."</option>";
+                         
+    }
+
+  mysqli_close($con);
+ ?>      
+        
     </select>
 </div>   
 <div class=' col-lg-2'>
-    <label for='sel1'>Placas</label>
-        <input type='text' class='form-control' id='Correo' name='Sucursal' required=''>
+    <label for='sel1' style="color:#37474f">Placas</label>
+        <input type='text' class='form-control' id='Placas' name='Placas' required=''>
     </div>
     </div>
     <!-- final row -->
@@ -310,31 +384,49 @@
     <div class='row'>
                                      
     <div class=' col-lg-3' >
-    <label for='sel1'>Serie</label>
-    <input type='text' class='form-control' id='Nombre' name='Nombre' required='' >
+    <label for='sel1' style="color:#37474f">Serie</label>
+    <input type='text' class='form-control' id='Serie' name='Serie' required='' >
 </div>
-    <div class=' col-lg-3'>
-    <label for='sel1'>Llaves</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
-        <option ></option>
-        <option value='Activa'>Si</option>
-        <option value='Bloqueada'>No</option>
+    <div class=' col-md-2'>
+    <label for='sel1' style="color:#37474f">Llaves</label>
+    <select class='form-control' id='Llaves' name='Llaves' required='' onchange="seleccionado()">
+    <option value="0" >Seleccionar</option>
+        <option value='Si'>Si</option>
+        <option value='No'>No</option>
         
     </select>
-    </div>
     
+    </div>
+    <div class=' col-lg-2 ocultar' style="display:none" id="opc1" >
+    <label for='sel1' style="color:#37474f">Ubicacion llaves</label>
+    <input type='text' class='form-control' id='Ubicacionllaves' name='Ubicacionllaves'  >
+</div>
     <div class=' col-lg-3'>
-    <label for='sel1'>Tipo Vehículo</label>
-    <select class='form-control' id='Estatus' name='Estatus' required=''>
-        <option ></option>
-        <option value='Activa'>Patio</option>
-        <option value='Bloqueada'>Liberado</option>
+    <label for='sel1' style="color:#37474f">Tipo Vehículo</label>
+    <select class='form-control' id='TipoVehiculo' name='TipoVehiculo' required=''>
+        <option >Seleccionar</option>
+        <option value='Remolque'>Remolque</option>
+        <option value='Vagoneta'>Vagoneta</option>
+        <option value='Sedan'>Sedan</option>
+        <option value='Tractocamion'>Tractocamion</option>
+        <option value='Motocicleta'>Motocicleta</option>
+        <option value='Bicicleta'>Bicicleta</option>
+        <option value='Pick up'>Pick up</option>
+        <option value='Tonelada'>Tonelada</option>
         
     </select>
 </div>   
 <div class=' col-lg-3' >
-    <label for='sel1'>Observaciones</label>
-    <textArea type='text' class='form-control' id='Nombre' name='Nombre' required='' ></textArea>
+    <label for='sel1' style="color:#37474f">Observaciones</label>
+    <textArea type='text' class='form-control' id='Observaciones' name='Observaciones'  ></textArea>
+</div>
+<div class=' col-lg-4' >
+    <label for='sel1' style="color:#37474f">Fotografia</label>
+    <input type='file' class='form-control' id='Fotografia' name='Fotografia' >
+</div>
+<div class=' col-lg-3' >
+    <label for='sel1' style="color:#37474f">Ubicacion Deposito</label>
+    <input type='text' class='form-control' id='Ubicacion' name='Ubicacion'  >
 </div>
     </div>
                                            
@@ -343,8 +435,9 @@
 
                                         <div class="modal-footer">
                                           
-                                            <button type="button" class="btn btn-primary">Registrar</button>
+                                            <button type="submit" class="btn btn-primary">Registrar</button>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>   
@@ -356,30 +449,30 @@
                                            
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                           <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
+                                           <img alt="image" src="images/logo.jpg" style="width: 100px; height:60px;margin-left:-700px;"/>
                                             <h4 class="modal-title" style="color:#37474f">Buscador de Vehículos</h4>
                                          
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body" style="background-color:#eeeeee">
                                         <div class='row'>
                                             <h3 style="color:#000000">Buscar por</h3>
     <div class=' col-lg-3' >
   
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Placas </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Placas </label>
 </div>
     <div class=' col-lg-3'>
    
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Fecha </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Fecha </label>
     </div>
     <div class=' col-lg-2'>
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Serie </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Serie </label>
     
     </div>
     <div class=' col-lg-2'>
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Automovil </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Automovil </label>
 </div>   
 <div class=' col-lg-2'>
-<input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Inventario </label>
+<input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Inventario </label>
     </div>
     </div>
     <!-- row2 -->
@@ -387,7 +480,7 @@
                                         
     <div class=' col-lg-3' >
   
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label>Motivo </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Motivo </label>
 </div>
     <div class=' col-lg-3'>
    
@@ -400,7 +493,7 @@
 
     </div>
     </div>
-   
+</div>
     <div class="row">
     
     <button class="btn btn-primary dim btn-large-dim" type="button" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
@@ -446,7 +539,7 @@
                                </tr>
                                 </tbody>
                             </table>
-      <div>                            
+                                                                  
                                            </div>
                                            </div>
 
@@ -456,15 +549,19 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
-                            <div class="modal inmodal fade" id="Estatus" tabindex="1" role="dialog"  aria-hidden="true">
+                            </div> 
+                        </div>
+
+
+                            
+                            <div class="modal inmodal fade" id="Estatus" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                            
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                           <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
+                                           <img alt="image" src="images/logo.jpg" style="width: 100px; height:60px;margin-left:-700px;"/>
                                             <h4 class="modal-title" style="color:#37474f">Actualización de Estatus</h4>
                                          
                                         </div>
@@ -481,14 +578,14 @@
                                     </div>
                                 </div>
                             </div>  
-                            <div class="modal inmodal fade" id="Entradas" tabindex="1" role="dialog"  aria-hidden="true">
+                            <div class="modal inmodal fade" id="Entradas" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                            
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                                            
-                                           <img alt="image" src="img/logoc5.png" style="width: 100px; height:60px;margin-left:-700px;"/>
+                                           <img alt="image" src="images/logo.jpg" style="width: 100px; height:60px;margin-left:-700px;"/>
                                             <h4 class="modal-title" style="color:#37474f">Entradas y Salidas</h4>
                                          
                                         </div>
@@ -504,7 +601,32 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
+                            </div> 
+
+                             <div class="modal inmodal fade" id="EditarBitacora" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                           
+                                            <h4 class="modal-title">Editar Datos Bitacora</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                        <form class="form-horizontal" method="post" action="EditarBit.php">
+                                        <div class="fetched-data"></div> 
+                                        
+                                        
+                                        </div>
+                                        <div class="modal-footer">
+                                            
+                                            <button type="submit" class="btn btn-primary">Editar</button>
+                                        </div>
+                                       </form>  
+                                    </div>
+                                    
+                                </div>
+                            </div> 
 
     <!-- Mainly scripts -->
     <script src="js/jquery-3.1.1.min.js"></script>
@@ -541,6 +663,8 @@
 
     <!-- Sparkline -->
     <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <!-- blueimp gallery -->
+    <script src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 
     <!-- Sparkline demo data  -->
     <script src="js/demo/sparkline-demo.js"></script>
@@ -579,6 +703,57 @@
         });
 
     </script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('#EditarBit').on('show.bs.modal', function (e) {
+
+                var rowid = $(e.relatedTarget).data('id');
+                
+                $.ajax({
+                    type : 'post',
+                    url : 'CargaModalBit.php', 
+                    data :  'rowid='+ rowid, //Pass $id
+                    success : function(data){
+                    
+                    $('.fetched-data').html(data);
+
+                
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+function CargarLineas(val)
+{
+   // $('#Marca').html("espera un momento");    
+    $.ajax({
+        type: "POST",
+        url: 'llenarLinea.php',
+        data: 'idmarca='+val,
+        success: function(resp){
+            $('#Linea').html(resp);
+            //$('#Marca').html("");
+        }
+    });
+}
+</script>
+<script>
+function seleccionado(){
+    var opt = $('#Llaves').val();
+    
+   // alert(opt);
+    if(opt=="Si"){
+        $('#opc1').show();
+       
+    }else{
+        
+        
+            $('#opc1').hide();
+       
+    }
+}
+</script>
 </body>
 
 <!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:24:34 GMT -->

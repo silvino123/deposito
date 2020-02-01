@@ -2,12 +2,12 @@
 require("conec.php");
 
 
-$consulta=mysqli_query($con,"SELECT * from lineas");
+$consulta=mysqli_query($con,"SELECT * from lineas ORDER BY Linea DESC");
         while($row = mysqli_fetch_array($consulta)){
             
             echo "<tr id='delete".$row['id_linea']."'>";
             echo "<td><b>" . $row['id_linea'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Nombre'] .  "</b></td>"; 
+            echo "<td><b>" . $row['Linea'] .  "</b></td>"; 
             
             echo "<td>
                          
@@ -25,7 +25,7 @@ $consulta=mysqli_query($con,"SELECT * from lineas");
    function deletelinea(id_linea) {
     
     
-     if (alertify.confirm('¿Esta seguro de que desea eliminar esta linea?','El elemento se eliminara permanentemente', function(){
+     if (alertify.confirm('¿Esta seguro de que desea eliminar este Modelo?','El elemento se eliminara permanentemente', function(){
       
        $.ajax({
            type: 'post',
