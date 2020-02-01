@@ -8,29 +8,42 @@ $consulta=mysqli_query($con,"SELECT C.id_bitacora,C.Ciudad,C.Fecha,C.Ubicacion,S
             echo "<tr style='color:#000000' id='delete".$row['id_bitacora']."'>";
             echo "<td><b>" . $row['Ciudad'] .  "</b></td>"; 
             echo "<td ><b>" . $row['Fecha'] .  "</b></td>"; 
-            echo "<td><b>" . $row['Ubicacion'] .  "</b></td>";
-            echo "<td ><b>" . $row['ONombre'] .  "</b></td>"; 
-            echo "<td><b>" . $row['id_bitacora'] .  "</b></td>";
+            echo "<td><b> </b></td>";
+            echo "<td><b>" . $row['NMarca'] .  "</b></td>";
+            echo "<td><b>" . $row['TipoVehiculo'] .  "</b></td>";
+            echo "<td><b>" . $row['MNombre'] .  "</b></td>";
+            echo "<td><b>" . $row['Linea'] .  "</b></td>";
+            echo "<td><b>" . $row['Color'] .  "</b></td>";
+            echo "<td><b>" . $row['Serie'] .  "</b></td>";
+            echo "<td><b>" . $row['Placas'] .  "</b></td>";
+            echo "<td><b> </b></td>";
             echo "<td><b>" . $row['InventarioOficial'] .  "</b></td>";
-            echo "<td><b>" . $row['iph'] .  "</b></td>";
-            echo "<td><b>" . $row['OficialEntrega'] .  "</b></td>";
-            echo "<td><b>" . $row['DNombre'] .  "</b></td>";
+            echo "<td><b>" . $row['id_bitacora'] .  "</b></td>";
+            echo "<td > <a href='img/gallery/".$row['Fotografia']."'  data-gallery=''>" . $row['Fotografia'] ."</a></td>";
+            echo "<td><b> </b></td>";
             echo "<td><b>" . $row['NMotivo'] .  "</b></td>";
+            echo "<td><b>" . $row['DNombre'] .  "</b></td>";
+            echo "<td><b>" . $row['OficialEntrega'] .  "</b></td>";
             echo "<td><b>" . $row['Zona'] .  "</b></td>";
+            echo "<td><b>" . $row['iph'] .  "</b></td>";
+           
+            
+            
+            
             echo "<td><b>" . $row['Origen'] .  "</b></td>";
             echo "<td><b> </b></td>";
             echo "<td><b>" . $row['Estatus'] .  "</b></td>";
             echo "<td><b>" . $row['InventarioDVA'] .  "</b></td>";
-            echo "<td><b>" . $row['NMarca'] .  "</b></td>";
-            echo "<td><b>" . $row['MNombre'] .  "</b></td>";
-            echo "<td><b>" . $row['Linea'] .  "</b></td>";
-            echo "<td><b>" . $row['Placas'] .  "</b></td>";
-            echo "<td><b>" . $row['Serie'] .  "</b></td>";
-            echo "<td><b>" . $row['Color'] .  "</b></td>";
+            
+           
+          
+          
+            
+            
             echo "<td><b>" . $row['Llaves'] ." ".$row['Ubicllaves'].  "</b></td>";
-            echo "<td > <a href='img/gallery/".$row['Fotografia']."'  data-gallery=''>" . $row['Fotografia'] ."</a></td>";
+           
             echo "<td><b>" . $row['Observaciones'] .  "</b></td>";
-            echo "<td><b>" . $row['TipoVehiculo'] .  "</b></td>";
+            
             echo "<td  ><b> </b></td>";
             echo "<td><b> </b></td>";
             echo "<td><b> </b></td>";
@@ -40,42 +53,12 @@ $consulta=mysqli_query($con,"SELECT C.id_bitacora,C.Ciudad,C.Fecha,C.Ubicacion,S
             echo "<td><b> </b></td>";
             echo "<td><b> </b></td>";
             echo "<td><b> </b></td>";
-            echo "<td>
-                         
-            <a data-target='#EditarBitacora' data-toggle='modal' class='btn btn-default' style='background-color:#757575;color:#fff' data-id=".$row['id_bitacora']."><i class='fas fa-pencil-alt' title='Editar'></i></a>
-          </td>";
-          echo "<td>
-           <a onclick='deleteBit(".$row['id_bitacora'].")' class='btn btn-danger'><i class='fas fa-trash' title='Eliminar'></i></a>
-           </td>";
+            
           
             echo"</tr>";
 
         }
         mysqli_close($con);
 ?>
-<script type="text/javascript">
-   
-   function deleteBit(id_bitacora) {
-    
-    
-     if (alertify.confirm('¿Esta seguro de que desea eliminar este Registro?','El elemento se eliminara permanentemente', function(){
-      
-       $.ajax({
-           type: 'post',
-           url: 'EliminarBitacora.php',
-           data:{delete_id:id_bitacora},
-           success:function(data){
-             
-           location.href ="admin.php";
-           }
-       });
-      },
-      function(){alertify.error('Operacion Cancelada')})) {
- 
- 
-     }
-  
-   }
- 
-  </script>
+
   

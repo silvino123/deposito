@@ -523,7 +523,7 @@ echo"</div>
     <div class=' col-lg-4'>
     </div>
 <div class=' col-lg-3'>
-<button class="btn btn-primary dim btn-large-dim" onclick="buscar();" type="button" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
+<button class="btn btn-primary dim btn-large-dim"  type="submit" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
     </div>
     </div>
 
@@ -628,14 +628,116 @@ echo"</div>
                                          
                                         </div>
                                         <div class="modal-body">
-                                           
+                                        <div class='row'>
+                
+<div class=' col-lg-4' >
+
+<label>Fecha</label>
+<input class="w3-radio"  type="date"  name="Placas"  id="Placas" placeholder="Ingrese Placas" class="form-control" > 
+<div class=' col-md-2'  id="opc2" >
+
+
+</div>
+</div>
+
+<div class=' col-lg-3'>
+
+<input class="w3-radio"  type="radio" required name="Q2" value="Fecha" id="Q2"> <label style="color:#37474f">Entradas </label>
+<div class=' col-lg-2' style="display:none" id="opc3" >
+
+<input class="w3-radio"  type="date"  name="Fecha"  id="Fecha" > 
+</div>
+</div>
+
+<div class=' col-lg-2'>
+<input class="w3-radio"  type="radio" required name="Q2" value="Motivo" id="Q2"> <label style="color:#37474f">Salidas </label>
+<div class=' col-md-2' style="display:none" id="opc4" >
+
+<input class="w3-radio"  type="text"  name="Serie"  id="Serie" placeholder="Ingrese Serie" > 
+</div>
+</div>
+<div class=' col-lg-2'>
+<button class="btn btn-primary dim btn-large-dim"  type="submit" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
+<div class=' col-md-2' style="display:none" id="opc5" >
+
+<input class="w3-radio"  type="text"  name="Automovil"  id="Automovil" placeholder="Ingrese Automovil" > 
+</div>
+</div>   
+<div class=' col-lg-3'>
+
+<div class=' col-md-2' style="display:none" id="opc6" >
+
+<input class="w3-radio"  type="text"  name="Inventario"  id="Inventario" placeholder="Ingrese Inventario" > 
+</div>
+</div>
+<div class=' col-lg-3' >
+
+
+<div class=' col-md-2' style="display:none" id="opc7" >
+
+<input class="w3-radio"  type="text"  name="Motivo"  id="Motivo" placeholder="Ingrese Motivo" > 
+</div>
+</div>
+</div>
+<!-- row2 -->
+<div class='row'>
+            
+
+<div class=' col-lg-3'>
+
+
+</div>
+<div class=' col-lg-3'>
+
+
+</div>
+<div class=' col-lg-2'>
+
+
+</div>
+<div class=' col-lg-4'>
+</div>
+<div class=' col-lg-3'>
+
+</div>
+</div>
+
+
+<div class="row">
+<div class=' col-lg-12'>
+<table class="table table-striped"  >
+    <thead>
+    <tr style="background-color:#37474f;color:#fff">
+        <th>Fecha Ingreso</th>
+        <th>Inventario</th>
+        <th>Motivo</th>
+        <th>Agencia</th>
+        <th>Marca</th>
+        <th>Linea</th>
+        <th>Tipo</th>
+        <th>Modelo</th>
+        <th>Placas</th>
+        <th>Serie</th>
+        <th>Color</th>
+        <th>Llaves</th>
+        <th>Observaciones</th>
+    </tr>
+    </thead>
+    <tbody id="buscar" >
+    
+    </tbody>
+</table>
+                                      
+               </div>
+          
+               </div>
                                   
                                            </div>
                                         
 
                                         <div class="modal-footer">
                                           
-                                            <button type="button" class="btn btn-primary">Registrar</button>
+                                            <!-- <button type="button" class="btn btn-primary">Registrar</button> -->
                                         </div>
                                     </div>
                                 </div>
@@ -890,24 +992,24 @@ $(document).ready(function() {
 <script>
     function buscar()
 {
-    var Placas = $("#Placas").val();
-    var Fecha = $("#Fecha").val();
-    var Serie = $("#Serie").val();
-    var Automovil = $("#Automovil").val();
-    var Inventario = $("#Inventario").val();
-    var Motivo = $("#Motivo").val();
+    // var Placas = $("#Placas").val();
+    // var Fecha = $("#Fecha").val();
+    // var Serie = $("#Serie").val();
+    // var Automovil = $("#Automovil").val();
+    // var Inventario = $("#Inventario").val();
+    // var Motivo = $("#Motivo").val();
    
-    $.ajax({
-        type: "POST",
-        dataType: 'html',
-        url: "buscar.php",
-        data: "placa="+Placas+"&fecha="+Fecha+"&serie="+Serie+"&automovil="+Automovil+"&inventario="+Inventario+"&motivo="+Motivo,
-        success: function(resp){
-            $('#buscar').html(resp);
-            //Limpiar();
-            //Cargar();
-        }
-    });
+    // $.ajax({
+    //     type: "POST",
+    //     dataType: 'html',
+    //     url: "buscar.php",
+    //     data: "placa="+Placas+"&fecha="+Fecha+"&serie="+Serie+"&automovil="+Automovil+"&inventario="+Inventario+"&motivo="+Motivo,
+    //     success: function(resp){
+    //         $('#buscar').html(resp);
+    //         //Limpiar();
+    //         //Cargar();
+    //     }
+    // });
 }   
     </script>
 </body>
