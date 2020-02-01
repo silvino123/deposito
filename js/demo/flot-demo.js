@@ -102,19 +102,19 @@ $(function() {
 $(function() {
 
     var data = [{
-        label: "Sales 1",
+        label: "Motivo 1",
         data: 21,
         color: "#d3d3d3",
     }, {
-        label: "Sales 2",
+        label: "Motivo 2",
         data: 3,
         color: "#bababa",
     }, {
-        label: "Sales 3",
+        label: "Motivo 3",
         data: 15,
         color: "#79d2c0",
     }, {
-        label: "Sales 4",
+        label: "Motivo 4",
         data: 52,
         color: "#1ab394",
     }];

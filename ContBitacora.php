@@ -62,7 +62,7 @@ $consulta=mysqli_query($con,"SELECT C.id_bitacora,C.Ciudad,C.Fecha,C.Ubicacion,S
       
        $.ajax({
            type: 'post',
-           url: 'EliminarBit.php',
+           url: 'EliminarBitacora.php',
            data:{delete_id:id_bitacora},
            success:function(data){
              

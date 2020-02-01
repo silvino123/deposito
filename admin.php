@@ -51,7 +51,7 @@
                             <button data-toggle="dropdown" class="btn btn-primary dim btn-large-dim dropdown-toggle" style="width: 140px;font-size: 14px;height: 50px"><i class="fas fa-car-alt"></i>&nbsp;Operaciones <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               
-                                <li><a  data-toggle="modal" data-target="#Estatus"><i class="fa fa-sync-alt"></i> Actualización Estatus</a></li>
+                                <li><a  data-toggle="modal" data-target="#myModal7"><i class="fa fa-sync-alt"></i> Actualización Estatus</a></li>
                                 <li class="divider"></li>
                                 <li><a data-toggle="modal" data-target="#Entradas"> <i class="fas fa-hand-holding-usd"></i> Entradas y Salidas</a></li>
                             </ul>
@@ -442,7 +442,7 @@ echo"</div>
                                 </div>
                             </div>   
                             
-                            <div class="modal inmodal fade" id="myModal6" tabindex="1" role="dialog"  aria-hidden="true">
+                            <div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -457,50 +457,80 @@ echo"</div>
                                         <div class='row'>
                                             <h3 style="color:#000000">Buscar por</h3>
     <div class=' col-lg-3' >
+    
+    <input class="w3-radio"  type="radio" required name="Q2" value="Placas" id="Q2"> <label style="color:#37474f">Placas </label>
+    <div class=' col-md-2' style="display:none" id="opc2" >
   
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Placas </label>
+  <input class="w3-radio"  type="text"  name="Placas"  id="Placas" placeholder="Ingrese Placas" class="form-control" > 
 </div>
+</div>
+
     <div class=' col-lg-3'>
    
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Fecha </label>
-    </div>
-    <div class=' col-lg-2'>
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Serie </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Fecha" id="Q2"> <label style="color:#37474f">Fecha </label>
+    <div class=' col-lg-2' style="display:none" id="opc3" >
+  
+  <input class="w3-radio"  type="date"  name="Fecha"  id="Fecha" > 
+</div>
+</div>
     
+    <div class=' col-lg-3'>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Serie" id="Q2"> <label style="color:#37474f">Serie </label>
+    <div class=' col-md-2' style="display:none" id="opc4" >
+  
+  <input class="w3-radio"  type="text"  name="Serie"  id="Serie" placeholder="Ingrese Serie" > 
+</div>
     </div>
     <div class=' col-lg-2'>
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Automovil </label>
+    <input class="w3-radio"  type="radio" required name="Q2" value="Automovil" id="Q2"> <label style="color:#37474f">Automovil </label>
+    <div class=' col-md-2' style="display:none" id="opc5" >
+  
+  <input class="w3-radio"  type="text"  name="Automovil"  id="Automovil" placeholder="Ingrese Automovil" > 
+</div>
 </div>   
-<div class=' col-lg-2'>
-<input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Inventario </label>
-    </div>
+<div class=' col-lg-3'>
+<input class="w3-radio"  type="radio" required name="Q2" value="Inventario" id="Q2"> <label style="color:#37474f">Inventario </label>
+<div class=' col-md-2' style="display:none" id="opc6" >
+  
+  <input class="w3-radio"  type="text"  name="Inventario"  id="Inventario" placeholder="Ingrese Inventario" > 
+</div>
+</div>
+<div class=' col-lg-3' >
+  
+    <input class="w3-radio"  type="radio" required name="Q2" value="Motivo" id="Q2"> <label style="color:#37474f">Motivo </label>
+    <div class=' col-md-2' style="display:none" id="opc7" >
+  
+  <input class="w3-radio"  type="text"  name="Motivo"  id="Motivo" placeholder="Ingrese Motivo" > 
+</div>
+</div>
     </div>
     <!-- row2 -->
     <div class='row'>
                                         
-    <div class=' col-lg-3' >
-  
-    <input class="w3-radio"  type="radio" required name="Q2" value="Si" id="Q2"> <label style="color:#37474f">Motivo </label>
-</div>
+    
     <div class=' col-lg-3'>
    
     
     </div>
+    <div class=' col-lg-3'>
+   
     
+    </div>
+    <div class=' col-lg-2'>
+   
+    
+    </div>
     <div class=' col-lg-4'>
-    
+    </div>
 <div class=' col-lg-3'>
+<button class="btn btn-primary dim btn-large-dim" onclick="buscar();" type="button" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
+    </div>
+    </div>
 
-    </div>
-    </div>
-</div>
-    <div class="row">
-    
-    <button class="btn btn-primary dim btn-large-dim" type="button" style="width: 140px;font-size: 20px;height: 40px"><i class="fa fa-search"></i>&nbsp;Buscar</button> 
-    </div>
+   
       <div class="row">
-      <div class=' col-lg-12'>
-      <table class="table table-striped">
+      <div class=' col-lg-8'>
+      <table class="table table-striped"  >
                                 <thead>
                                 <tr style="background-color:#37474f;color:#fff">
                                     <th>Inventario</th>
@@ -514,47 +544,55 @@ echo"</div>
                                     <th>Motivo</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                               <tr>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                               </tr>
-                               <tr>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                                   <td></td>
-                               </tr>
+                                <tbody id="buscar" >
+                                
                                 </tbody>
                             </table>
                                                                   
                                            </div>
+                                           <div class="col-lg-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Grafico de Motivos</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <!-- <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li> -->
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="flot-chart">
+                                <div class="flot-chart-pie-content" id="flot-pie-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                                            </div>
-
+                                        </div>
                                         <div class="modal-footer">
                                           
                                             <!-- <button type="button" class="btn btn-primary">Registrar</button> -->
                                         </div>
-                                    </div>
+                                    
                                 </div>
                             </div> 
                         </div>
 
 
                             
-                            <div class="modal inmodal fade" id="Estatus" tabindex="-1" role="dialog"  aria-hidden="true">
+                            <div class="modal inmodal fade" id="myModal7" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -612,7 +650,7 @@ echo"</div>
                                             <h4 class="modal-title">Editar Datos Bitacora</h4>
                                             
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body" style="background-color:#e0e0e0">
                                         <form class="form-horizontal" method="post" action="EditarBit.php">
                                         <div class="fetched-data"></div> 
                                         
@@ -646,7 +684,8 @@ echo"</div>
     <!-- Peity -->
     <script src="js/plugins/peity/jquery.peity.min.js"></script>
     <script src="js/demo/peity-demo.js"></script>
-
+<!-- Flot demo data -->
+<script src="js/demo/flot-demo.js"></script>
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
@@ -666,8 +705,7 @@ echo"</div>
     <!-- blueimp gallery -->
     <script src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
 
-    <!-- Sparkline demo data  -->
-    <script src="js/demo/sparkline-demo.js"></script>
+   
 <!-- Toastr -->
 <script src="js/plugins/toastr/toastr.min.js"></script>
  <!-- GITTER -->
@@ -701,11 +739,51 @@ echo"</div>
             });
 
         });
+        $(function() {
 
+var data = [{
+    label: "Motivo 1",
+    data: 21,
+    color: "#d3d3d3",
+}, {
+    label: "Motivo 2",
+    data: 3,
+    color: "#bababa",
+}, {
+    label: "Motivo 3",
+    data: 15,
+    color: "#37474f",
+}, {
+    label: "Motivo 4",
+    data: 52,
+    color: "#ffb74d",
+}];
+
+var plotObj = $.plot($("#flot-pie-chart"), data, {
+    series: {
+        pie: {
+            show: true
+        }
+    },
+    grid: {
+        hoverable: true
+    },
+    tooltip: true,
+    tooltipOpts: {
+        content: "%p.0%, %s", // show percentages, rounding to 2 decimal places
+        shifts: {
+            x: 20,
+            y: 0
+        },
+        defaultTheme: false
+    }
+});
+
+});
     </script>
      <script type="text/javascript">
         $(document).ready(function(){
-            $('#EditarBit').on('show.bs.modal', function (e) {
+            $('#EditarBitacora').on('show.bs.modal', function (e) {
 
                 var rowid = $(e.relatedTarget).data('id');
                 
@@ -754,6 +832,84 @@ function seleccionado(){
     }
 }
 </script>
+<script>
+$(document).ready(function() {
+    $("input[type=radio]").click(function(event){
+        var valor = $(event.target).val();
+        if(valor =="Placas"){
+            $("#opc2").show();
+            $("#opc3").hide();
+            $("#opc4").hide();
+            $("#opc5").hide();
+            $("#opc6").hide();
+            $("#opc7").hide();
+        } 
+        if(valor =="Fecha"){
+            $("#opc2").hide();
+            $("#opc3").show();
+            $("#opc4").hide();
+            $("#opc5").hide();
+            $("#opc6").hide();
+            $("#opc7").hide();
+        }
+        if(valor =="Serie"){
+            $("#opc2").hide();
+            $("#opc3").hide();
+            $("#opc4").show();
+            $("#opc5").hide();
+            $("#opc6").hide();
+            $("#opc7").hide();
+        }
+        if(valor =="Automovil"){
+            $("#opc2").hide();
+            $("#opc3").hide();
+            $("#opc4").hide();
+            $("#opc5").show();
+            $("#opc6").hide();
+            $("#opc7").hide();
+        }
+        if(valor =="Inventario"){
+            $("#opc2").hide();
+            $("#opc3").hide();
+            $("#opc4").hide();
+            $("#opc5").hide();
+            $("#opc6").show();
+            $("#opc7").hide();
+        }
+        if(valor =="Motivo"){
+            $("#opc2").hide();
+            $("#opc3").hide();
+            $("#opc4").hide();
+            $("#opc5").hide();
+            $("#opc6").hide();
+            $("#opc7").show();
+        }
+    });
+});
+</script>
+<script>
+    function buscar()
+{
+    var Placas = $("#Placas").val();
+    var Fecha = $("#Fecha").val();
+    var Serie = $("#Serie").val();
+    var Automovil = $("#Automovil").val();
+    var Inventario = $("#Inventario").val();
+    var Motivo = $("#Motivo").val();
+   
+    $.ajax({
+        type: "POST",
+        dataType: 'html',
+        url: "buscar.php",
+        data: "placa="+Placas+"&fecha="+Fecha+"&serie="+Serie+"&automovil="+Automovil+"&inventario="+Inventario+"&motivo="+Motivo,
+        success: function(resp){
+            $('#buscar').html(resp);
+            //Limpiar();
+            //Cargar();
+        }
+    });
+}   
+    </script>
 </body>
 
 <!-- Mirrored from webapplayers.com/inspinia_admin-v2.7.1/dashboard_2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Oct 2017 15:24:34 GMT -->
